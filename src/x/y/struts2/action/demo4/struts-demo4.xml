@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="demo4" extends="struts-default" namespace="/">
+        <!-- 全局结果页面配置 -->
+        <global-results>
+            <!-- result中的type用于配置页面跳转的类型
+                dispatcher:默认值，请求转发(action转发到jsp)
+                redirect: 重定向(action重定向到jsp)
+                chain:转发(action转发到action)
+                redirectAction:重定向(action重定向到action)
+                steam：Struts2提供的文件下载功能
+            -->
+            <result name="success">/demo3/demo2.jsp</result>
+        </global-results>
+
+        <!-- 下面三个结果页面相同,可以配置全局结果页面 -->
+        <action name="requestDemo1" class="x.y.struts2.action.demo4.RequestDemo1">
+            <!--<result name="success">/demo3/demo2.jsp</result>-->
+        </action>
+        <action name="requestDemo2" class="x.y.struts2.action.demo4.RequestDemo2">
+            <!--<result name="success">/demo3/demo2.jsp</result>-->
+        </action>
+        <action name="requestDemo3" class="x.y.struts2.action.demo4.RequestDemo3">
+            <!--<result name="success">/demo3/demo2.jsp</result>-->
+        </action>
+    </package>
+
+</struts>

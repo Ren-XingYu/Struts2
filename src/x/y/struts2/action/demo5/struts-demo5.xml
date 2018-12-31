@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="demo5" extends="struts-default" namespace="/">
+        <global-results>
+            <!-- 全局错误信息 -->
+            <result name="input">/demo4/demo1.jsp</result>
+        </global-results>
+        <action name="userAction1" class="x.y.struts2.action.demo5.UserAction1"/>
+        <action name="userAction2" class="x.y.struts2.action.demo5.UserAction2"/>
+        <action name="userAction3" class="x.y.struts2.action.demo5.UserAction3"/>
+    </package>
+
+</struts>

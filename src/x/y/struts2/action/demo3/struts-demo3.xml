@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- 启动动态方法访问 -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+    <package name="demo3" extends="struts-default" namespace="/">
+        <action name="userFind" class="x.y.struts2.action.demo3.UserAction" method="find"/>
+        <action name="userUpdate" class="x.y.struts2.action.demo3.UserAction" method="update"/>
+        <action name="userDelete" class="x.y.struts2.action.demo3.UserAction" method="delete"/>
+        <action name="userSave" class="x.y.struts2.action.demo3.UserAction" method="save"/>
+        
+        <!-- 1：代表通配符中第一个*号的取值
+            通配符更抽象的写法：
+            <action name="*_*" class="xxx.{1}" method="{2}">
+        -->
+        <action name="product_*" class="x.y.struts2.action.demo3.ProductAction" method="{1}"/>
+
+        <!-- 动态方法访问
+            注意JSP页面中路径的写法
+        -->
+        <action name="customer" class="x.y.struts2.action.demo3.CustomerAction"/>
+    </package>
+
+</struts>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- Struts为了管理Action，使用package来管理 abstract:用于其它包的继承 -->
+    <package name="demo1" extends="struts-default" namespace="/">
+        <!-- 配置action
+         method:要执行action中的哪个方法，默认execute
+         converter:用于自定义类型转换器
+         -->
+        <action name="hello" class="x.y.struts2.action.demo1.HelloAction">
+            <result name="success">/demo1/success.jsp</result>
+        </action>
+    </package>
+
+</struts>

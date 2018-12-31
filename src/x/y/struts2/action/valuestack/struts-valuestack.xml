@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="valuestack" extends="struts-default" namespace="/">
+        <action name="valueStackDemo1" class="x.y.struts2.action.valuestack.ValueStackDemo1"/>
+        <action name="valueStackDemo2" class="x.y.struts2.action.valuestack.ValueStackDemo2">
+            <result name="success">/demo7/demo1.jsp</result>
+        </action>
+        <action name="valueStackDemo3" class="x.y.struts2.action.valuestack.ValueStackDemo3">
+            <result name="success">/demo7/demo1.jsp</result>
+        </action>
+    </package>
+
+</struts>
